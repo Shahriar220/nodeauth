@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title #{title}:NodeAuth
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')   
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+        a.navbar-brand(href='#') Home
+        |       
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        |       
+        #navbarsExampleDefault.collapse.navbar-collapse
+          ul.navbar-nav.navbar-right
+            li.nav-item.active
+              a.nav-link(href='#')
+                | Member 
+
+            |           
+            li.nav-item.active
+              a.nav-link(href='/users/register') Register
+            |           
+            li.nav-item.active
+              a.nav-link(href='/users/login') Login
+          ul.navbar-nav.navbar-left
+            li.nav-item.active
+              a.nav-link(href='/users/logout') Logout 
+    .container
+      block content
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="javascripts/bootstrap.js"></script>
