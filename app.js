@@ -8,7 +8,7 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var bodyParser = require('body-parser');
-var multer = require('multer');
+//var multer = require('multer');
 var flash = require('connect-flash');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 //file upload
-app.use(multer({ dest: './uploads/' }).single('photo'));
+//app.use(multer({ dest: 'uploads/' }).single('profileimg'));
 
 app.use(logger('dev'));
 app.use(express.json());
