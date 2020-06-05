@@ -20,16 +20,19 @@ html
               a.nav-link(href='#')
                 | Member 
 
-            |           
-            li.nav-item.active
-              a.nav-link(href='/users/register') Register
-            |           
-            li.nav-item.active
-              a.nav-link(href='/users/login') Login
+            | 
+            if !user          
+              li.nav-item.active
+                a.nav-link(href='/users/register') Register
+              |           
+              li.nav-item.active
+                a.nav-link(href='/users/login') Login
           ul.navbar-nav.navbar-center
-            li.nav-item.active
-              a.nav-link(href='/users/logout') Logout 
+            if user
+              li.nav-item.active
+                a.nav-link(href='/users/logout') Logout 
     .container
+      !=messages()
       block content
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
